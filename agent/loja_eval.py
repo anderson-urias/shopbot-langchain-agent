@@ -164,6 +164,8 @@ class TrajetoriaCallbackHandler(BaseCallbackHandler):
     def salvar_trajetoria(self, caminho_arquivo: str = "logs/trajetoria_tools.json") -> Path:
         """Grava o histórico acumulado da sessão em JSON (indent=2, UTF-8, sem escapar acentos)."""
         caminho = _resolver_caminho(caminho_arquivo)
+        if not self.historico and caminho.exists():
+            return caminho
         caminho.parent.mkdir(parents=True, exist_ok=True)
         with self._lock:
             conteudo = json.dumps(self.historico, indent=2, ensure_ascii=False, default=str)

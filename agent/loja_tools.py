@@ -385,6 +385,9 @@ def excluir_pedido(pedido_id: str, confirmar: bool = False) -> dict:
     """
     Exclui um pedido pelo ID. Ação destrutiva: pergunte ao usuário antes e só
     chame com confirmar=True após a confirmação explícita.
+    ATENÇÃO LLM: Esta ferramenta APENAS apaga o registro do sistema. Ela NÃO processa reembolsos, 
+    devoluções ou estornos de pagamento. Se o cliente pedir reembolso, informe que a exclusão 
+    foi feita, mas que o estorno depende de rotinas financeiras externas.
     """
     pedidos = _ler_pedidos()
     pedido = next((p for p in pedidos if p.pedido_id == pedido_id), None)

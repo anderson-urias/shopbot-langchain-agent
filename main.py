@@ -28,6 +28,7 @@ from agent.loja_eval import (  # noqa: E402
     JuizFactual,
     TrajetoriaCallbackHandler,
 )
+from agent.loja_memory import carregar_perfil, obter_resumo_perfil  # noqa: E402
 from agent.loja_rag import RAG_TOOLS  # noqa: E402
 from agent.loja_tools import TOOLS  # noqa: E402
 
