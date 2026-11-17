@@ -2,6 +2,8 @@
 
 O ShopBot é um assistente de e-commerce em CLI que consulta produtos, auxilia no carrinho e responde dúvidas sobre as políticas da loja. O projeto usa LangChain/LangGraph, Google Gemini, ferramentas externas, RAG com FAISS e auditoria das respostas.
 
+Este é um projeto acadêmico apresentado na disciplina de Agentes Cognitivos com Langchain, do MBA em Engenharia de IA, Machine Learning e Deep Learning da INFNET.
+
 ## Pré-requisitos e configuração
 
 Use Python com `pip` e uma chave da API Google Gemini. Na raiz do projeto, instale as dependências:
